@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth; /* تفعيل التمرير السلس عند الضغط على الروابط */
+    scroll-behavior: smooth;
 }
 
 * {
@@ -45,7 +45,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    pointer-events: none; /* حل المشكلة: السماح بالضغط من خلال خلفية الـ 3D */
+    pointer-events: none;
 }
 
 /* Navbar */
@@ -59,7 +59,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 999; /* رفع النافبار لتكون فوق جميع العناصر */
+    z-index: 999;
     border-bottom: 1px solid var(--card-border);
 }
 
@@ -109,10 +109,39 @@ body {
 .highlight { color: var(--accent-color); }
 .hero-text h2 { font-size: 1.2rem; color: var(--text-sub); margin-bottom: 15px; }
 
+/* تنسيق أيقونات وسائل التواصل الاجتماعي والتأثيرات */
+.social-links {
+    display: flex;
+    gap: 18px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--text-sub);
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+}
+
+.social-links a[aria-label="GitHub"]:hover { color: #ffffff; }
+.social-links a[aria-label="LinkedIn"]:hover { color: #0a66c2; }
+.social-links a[aria-label="WhatsApp"]:hover { color: #25d366; }
+.social-links a[aria-label="Facebook"]:hover { color: #1877f2; }
+.social-links a[aria-label="Instagram"]:hover { color: #e4405f; }
+
+.contact-socials {
+    margin-bottom: 20px;
+}
+
 .hero-image-wrapper { position: relative; width: 280px; height: 280px; flex-shrink: 0; }
 .profile-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 3px solid var(--accent-color); }
 
-.hero-buttons { display: flex; gap: 12px; margin-top: 25px; flex-wrap: wrap; }
+.hero-buttons { display: flex; gap: 12px; margin-top: 15px; flex-wrap: wrap; }
 
 .section {
     padding: 90px 6%;
@@ -181,6 +210,11 @@ body {
     color: var(--accent-color);
 }
 
+.whatsapp-btn {
+    background-color: #25d366;
+    color: #fff;
+}
+
 .project-img-placeholder {
     height: 140px;
     background: rgba(0, 242, 254, 0.05);
@@ -195,7 +229,7 @@ body {
 }
 
 .contact-info { margin: 15px 0; color: var(--text-sub); line-height: 1.8; }
-.contact-buttons { display: flex; gap: 15px; margin-top: 15px; }
+.contact-buttons { display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap; }
 
 /* Responsive Queries */
 @media (max-width: 900px) {
@@ -222,6 +256,8 @@ body {
         flex-direction: column-reverse;
         text-align: center;
     }
+
+    .social-links { justify-content: center; }
 
     .hero-buttons { justify-content: center; }
 
