@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باسم مرسي | Basem Morsi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="dark-theme">
+
+    <!-- خلفية الـ 3D التفاعلية -->
+    <canvas id="bg3d"></canvas>
+
+    <!-- الهيدر ونظام التنقل -->
+    <nav class="navbar">
+        <div class="logo">BASEM<span>.</span>MORSI</div>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#skills">المهارات</a></li>
+            <li><a href="#experience">الخبرات</a></li>
+            <li><a href="#projects">الأعمال</a></li>
+            <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+            <button id="menu-toggle" class="menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="greeting">أهلاً بك، أنا</span>
+                <h1>باسم مرسي <span class="highlight">Basem Morsi</span></h1>
+                <h2>Odoo Techno-Functional & Full-Stack Developer</h2>
+                <p>طالب نظم معلومات الأعمال (BIS) ومطور ويب متكامل وأخصائي أودو، بالإضافة إلى صناعة محتوى الجرافيك والـ CGI والأنيميشن ثلاثي الأبعاد.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">استكشف أعمالي</a>
+                    <a href="Basem_Morsi_Odoo_FullStack_CV (1).pdf" download class="btn outline-btn">تحميل السيرة الذاتية 📄</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="image-glow"></div>
+                <img src="my-photo.jpg" alt="باسم مرسي" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About / عني والسيرة الذاتية -->
+    <section id="about" class="section">
+        <h2>الملخص المهني والتعليم</h2>
+        <div class="cv-grid">
+            <div class="card cv-card">
+                <div class="cv-icon">🎓</div>
+                <h3>التعليم الأكاديمي</h3>
+                <p><strong>بكالوريوس نظم معلومات الأعمال (BIS)</strong></p>
+                <p>جامعة العبور للعلوم والتكنولوجيا (2023 - 2027)</p>
+                <p>أجمع بين الفهم العملي للهيكل الإداري والمحاسبي وسلاسل الإمداد، والقدرة البرمجية المتقدمة.</p>
+            </div>
+            <div class="card cv-card">
+                <div class="cv-icon">⚙️</div>
+                <h3>تطوير أودو والأنظمة</h3>
+                <p>تطوير وتخصيص موديولات Odoo المخصصة باستخدام Python و XML، إعداد تقارير QWeb، وربط الأنظمة عبر RESTful APIs و PostgreSQL.</p>
+            </div>
+            <div class="card cv-card">
+                <div class="cv-icon">🎬</div>
+                <h3>تطوير الويب والـ 3D</h3>
+                <p>تطوير تطبيقات الويب (Vue.js, Laravel, JS) بالإضافة إلى إنشاء الموديلات والأنيميشن ثلاثي الأبعاد (Blender & CGI) والإعلانات البصرية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / المهارات -->
+    <section id="skills" class="section">
+        <h2>المهارات والقدرات الأساسية</h2>
+        <div class="grid">
+            <div class="card skill-card">
+                <h3>تطوير وتخصيص Odoo</h3>
+                <ul class="skills-list">
+                    <li>Odoo ORM / Framework & Python</li>
+                    <li>Custom Modules & QWeb Reports</li>
+                    <li>Sales, CRM, Inventory, Invoicing & POS</li>
+                    <li>Data Migration & Odoo Studio</li>
+                </ul>
+            </div>
+            <div class="card skill-card">
+                <h3>تطوير الويب الكامل (Full-Stack)</h3>
+                <ul class="skills-list">
+                    <li>Vue.js & JavaScript (ES6+)</li>
+                    <li>PHP (Laravel Framework) & MySQL</li>
+                    <li>HTML5, CSS3 & Bootstrap</li>
+                    <li>RESTful APIs Integration & XML-RPC</li>
+                </ul>
+            </div>
+            <div class="card skill-card">
+                <h3>الـ 3D والأدوات الإضافية</h3>
+                <ul class="skills-list">
+                    <li>Blender 3D Modeling & CGI Animation</li>
+                    <li>Git & GitHub, Postman, Linux Basics</li>
+                    <li>PostgreSQL Database Management</li>
+                    <li>ICDL Certified</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / الخبرات -->
+    <section id="experience" class="section">
+        <h2>الخبرة المهنية</h2>
+        <div class="timeline">
+            <div class="card timeline-card">
+                <span class="date">أكتوبر 2025 - حتى الآن</span>
+                <h3>أخصائي ومطور أودو وتطبيقات ويب</h3>
+                <h4>شركة تك للحلول والأنظمة الرقمية (Tech Solutions)</h4>
+                <ul>
+                    <li>تحليل وتخطيط دورات العمل للشركات ومطابقتها مع موديولات أودو القياسية.</li>
+                    <li>برمجة وتطوير موديولات وإضافات مخصصة بلغة Python و XML.</li>
+                    <li>تصميم تقارير QWeb مخصصة للطباعة (فواتير، عروض أسعار، أذونات مخزون).</li>
+                    <li>بناء APIs لربط بيانات أودو مع منصات الويب والمتاجر الإلكترونية.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / الأعمال -->
+    <section id="projects" class="section">
+        <h2>أبرز المشاريع المنفذة</h2>
+        <div class="grid">
+            <div class="card project-card">
+                <div class="project-img-placeholder">ERP System</div>
+                <h3>تطبيق وتخصيص نظام ERP</h3>
+                <p>تهيئة الدورة المستندية الكاملة (شراء - مخزن - مبيعات - فوترة) مع موديول لتتبع حركات الأصناف والتنبيه الآلي.</p>
+            </div>
+            <div class="card project-card">
+                <div class="project-img-placeholder">Odoo Dashboard</div>
+                <h3>لوحة تحكم تفاعلية Analytics</h3>
+                <p>تصميم لوحة تحكم لعرض تقارير المبيعات ومعدلات حركة المخزون والربحية بشكل لحظي للإدارة.</p>
+            </div>
+            <div class="card project-card">
+                <div class="project-img-placeholder">Full-Stack & Odoo API</div>
+                <h3>منصة إدارة الطلبات والمزامنة</h3>
+                <p>منصة ويب باستخدام Vue.js و Laravel متصلة مباشرة بقاعدة بيانات أودو لإنشاء أوامر التوريد والبيع تلقائياً.</p>
+            </div>
+            <div class="card project-card">
+                <div class="project-img-placeholder">3D & CGI Motion</div>
+                <h3>أعمال CGI وإعلانات 3D</h3>
+                <p>تصميم أنيميشن وموديلات 3D وهويات بصرية باستخدام Blender وأدوات الذكاء الاصطناعي البصري.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / تواصل معي -->
+    <section id="contact" class="section">
+        <h2>تواصل معي</h2>
+        <div class="card contact-card">
+            <p>هل لديك مشروع أو تريد تطوير أنظمة لشركتك؟ يسعدني التواصل معك مباشرة:</p>
+            <div class="contact-info">
+                <p>📍 الشرقية، العاشر من رمضان / الزقازيق، مصر</p>
+                <p>📧 basemmorsy005@gmail.com</p>
+            </div>
+            <div class="contact-buttons">
+                <a href="https://wa.me/201091549086" target="_blank" class="btn whatsapp-btn">واتساب المباشر</a>
+                <a href="https://linkedin.com/in/basem-morsi-a86364349" target="_blank" class="btn outline-btn">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
