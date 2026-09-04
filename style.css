@@ -89,14 +89,23 @@ body {
     gap: 10px;
 }
 
-.theme-btn, .menu-btn {
+.theme-btn, .menu-btn, .lang-btn {
     background: transparent;
     border: 1px solid var(--accent-color);
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 6px 12px;
     border-radius: 8px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover, .theme-btn:hover {
+    background: var(--accent-color);
+    color: #000;
 }
 
 .menu-btn { display: none; }
@@ -109,7 +118,7 @@ body {
 .highlight { color: var(--accent-color); }
 .hero-text h2 { font-size: 1.2rem; color: var(--text-sub); margin-bottom: 15px; }
 
-/* تنسيق أيقونات وسائل التواصل الاجتماعي والتأثيرات */
+/* أيقونات التواصل الاجتماعي */
 .social-links {
     display: flex;
     gap: 18px;
@@ -150,8 +159,15 @@ body {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    border-right: 4px solid var(--accent-color);
     padding-right: 15px;
+    border-right: 4px solid var(--accent-color);
+}
+
+html[dir="ltr"] .section h2 {
+    padding-right: 0;
+    padding-left: 15px;
+    border-right: none;
+    border-left: 4px solid var(--accent-color);
 }
 
 /* Grid & Cards */
@@ -210,26 +226,28 @@ body {
     color: var(--accent-color);
 }
 
-.whatsapp-btn {
-    background-color: #25d366;
-    color: #fff;
+/* تنسيق إطار وصور المشاريع الجديد */
+.project-img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--card-border);
 }
 
-.project-img-placeholder {
-    height: 140px;
-    background: rgba(0, 242, 254, 0.05);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-color);
-    margin-bottom: 15px;
-    border: 1px dashed var(--accent-color);
-    font-weight: bold;
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .contact-info { margin: 15px 0; color: var(--text-sub); line-height: 1.8; }
-.contact-buttons { display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap; }
 
 /* Responsive Queries */
 @media (max-width: 900px) {
@@ -239,7 +257,7 @@ body {
         position: absolute;
         top: 60px;
         right: 0;
-        width: 100%;
+        left: 0;
         background: var(--nav-bg);
         backdrop-filter: blur(15px);
         flex-direction: column;
@@ -258,7 +276,6 @@ body {
     }
 
     .social-links { justify-content: center; }
-
     .hero-buttons { justify-content: center; }
 
     .hero-image-wrapper {
